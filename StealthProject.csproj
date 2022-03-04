@@ -243,6 +243,7 @@
     <Compile Include="Assets\Scripts\AlarmTrigger.cs" />
     <Compile Include="Assets\Scripts\GameConsts.cs" />
     <Compile Include="Assets\Scripts\LaserTwinkle.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\ReflectiveDiffuseSpecTransp.shader" />
