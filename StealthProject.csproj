@@ -238,7 +238,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Test.cs" />
+    <Compile Include="Assets\Scripts\AlarmLight.cs" />
+    <Compile Include="Assets\Scripts\AlarmSystem.cs" />
+    <Compile Include="Assets\Scripts\AlarmTrigger.cs" />
+    <Compile Include="Assets\Scripts\GameConsts.cs" />
+    <Compile Include="Assets\Scripts\LaserTwinkle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\ReflectiveDiffuseSpecTransp.shader" />
