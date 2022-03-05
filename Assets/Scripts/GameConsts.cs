@@ -10,6 +10,9 @@ public class GameConsts
     public const string ALARMLIGHT = "AlarmLight";
     public const string SIREN = "Siren";
     public const string PLAYER = "Player";
+    public const string ENEMY = "Enemy";
+    public const string INNERDOOR = "InnerDoor";
+    public const string LIFT = "Lift";
     #endregion
 
     #region Virtual Button & Axis
@@ -17,6 +20,7 @@ public class GameConsts
     public const string VERTICAL = "Vertical";
     public const string SNEAK = "Sneak";
     public const string SHOUT = "Shout";
+    public const string SWITCH = "Switch";
     #endregion
 
     #region Animation Parameters & States
@@ -26,6 +30,9 @@ public class GameConsts
     public static int SNEAK_PARAM;
     //喊叫参数
     public static int SHOUT_PARAM;
+    //开关门参数
+    public static int DOOROPEN_PARAM;
+
     //运动状态
     public static int LOCOMOTION_STATE;
     #endregion
@@ -44,6 +51,7 @@ public class GameConsts
         SNEAK_PARAM = Animator.StringToHash("Sneak");
         SHOUT_PARAM = Animator.StringToHash("Shout");
         LOCOMOTION_STATE = Animator.StringToHash("Locomotion");
+        DOOROPEN_PARAM = Animator.StringToHash("DoorOpen");
         //Debug.Log("static");
     }
     #endregion
