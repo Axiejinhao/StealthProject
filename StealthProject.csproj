@@ -238,6 +238,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\AlarmLight.cs" />
     <Compile Include="Assets\Scripts\AlarmSystem.cs" />
     <Compile Include="Assets\Scripts\AlarmTrigger.cs" />

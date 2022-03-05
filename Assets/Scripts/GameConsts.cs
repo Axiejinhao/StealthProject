@@ -30,6 +30,13 @@ public class GameConsts
     public static int LOCOMOTION_STATE;
     #endregion
 
+    #region Game Paramters
+    //摄像机头顶观察时的偏移量
+    public const float WATCH_OFFSET = 0f;
+    //玩家身体偏移量
+    public const float PLAYER_BODY_OFFSET = 1f;
+    #endregion
+
     #region Static Constructor
     static GameConsts()
     {
