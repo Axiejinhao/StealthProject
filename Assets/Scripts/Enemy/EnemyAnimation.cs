@@ -62,7 +62,7 @@ public class EnemyAnimation : MonoBehaviour
 
         //前方与期望速度向量的法向量
         Vector3 normal = Vector3.Cross(transform.forward, nav.desiredVelocity);
-        //叉乘,a*b,a在右朝上,a在左朝下
+        //叉乘,小于零在左,大于零在右
         if (normal.y < 0)
         {
             angle *= -1;

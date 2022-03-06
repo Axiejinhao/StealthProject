@@ -17,8 +17,8 @@ public class EnemySenses : MonoBehaviour
     public bool playerInSight = false;
 
     //机器人私人的警报位置
-    //[SerializeField]
-    private Vector3 personAlarmPosition;
+    [HideInInspector]
+    public Vector3 personAlarmPosition;
     //上一帧的警报位置
     private Vector3 previousAlarmPosition;
 
@@ -142,6 +142,15 @@ public class EnemySenses : MonoBehaviour
         }
         //能否找到玩家
         bool canArrive = nav.CalculatePath(player.position, path);
+
+        ////*难度降低:玩家可以在房间里发出声音,需开启动态路障(NavMeshObstacle)
+        ////查看路径的状态(能到达,有路障无法到达,路径不存在)
+        //if (path.status == NavMeshPathStatus.PathPartial)
+        //{
+        //    //无法到达,存在路障
+        //    return;
+        //}
+
         if (canArrive)
         {
             Vector3[] points = new Vector3[path.corners.Length + 2];

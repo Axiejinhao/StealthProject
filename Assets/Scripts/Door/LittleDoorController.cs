@@ -22,7 +22,7 @@ public class LittleDoorController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.isTrigger);
+        //Debug.Log(other.isTrigger);
         if (other.isTrigger)
         {
             return;
