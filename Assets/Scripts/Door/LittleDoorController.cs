@@ -22,6 +22,11 @@ public class LittleDoorController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.isTrigger);
+        if (other.isTrigger)
+        {
+            return;
+        }
         //如果是玩家或是机器人
         if (other.CompareTag(GameConsts.PLAYER) || other.CompareTag(GameConsts.ENEMY))
         {
@@ -38,6 +43,10 @@ public class LittleDoorController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (other.isTrigger)
+        {
+            return;
+        }
         //如果是玩家或是机器人
         if (other.CompareTag(GameConsts.PLAYER) || other.CompareTag(GameConsts.ENEMY))
         {

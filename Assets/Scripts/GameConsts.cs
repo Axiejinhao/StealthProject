@@ -35,6 +35,8 @@ public class GameConsts
 
     //运动状态
     public static int LOCOMOTION_STATE;
+    //角速度参数
+    public static int ANGULARSPEED_PARAM;
     #endregion
 
     #region Game Paramters
@@ -50,6 +52,7 @@ public class GameConsts
     static GameConsts()
     {
         SPEED_PARAM = Animator.StringToHash("Speed");
+        ANGULARSPEED_PARAM = Animator.StringToHash("AngularSpeed");
         SNEAK_PARAM = Animator.StringToHash("Sneak");
         SHOUT_PARAM = Animator.StringToHash("Shout");
         LOCOMOTION_STATE = Animator.StringToHash("Locomotion");

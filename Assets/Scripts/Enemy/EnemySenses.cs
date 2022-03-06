@@ -13,6 +13,9 @@ public class EnemySenses : MonoBehaviour
 {
     [Header("视野范围")]
     public float fieldOfView = 100f;
+    [HideInInspector]
+    public bool playerInSight = false;
+
     //机器人私人的警报位置
     //[SerializeField]
     private Vector3 personAlarmPosition;
@@ -69,6 +72,16 @@ public class EnemySenses : MonoBehaviour
         Hearing();
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.CompareTag(GameConsts.PLAYER))
+        {
+            return;
+        }
+        //离开触发器,则看不到玩家
+        playerInSight = false;
+    }
+
     /// <summary>
     /// 检测警报位置是否更新
     /// </summary>
@@ -90,6 +103,8 @@ public class EnemySenses : MonoBehaviour
     /// </summary>
     private void Sighting()
     {
+        //默认为false
+        playerInSight = false;
         dir = player.position - transform.position;
         //计算夹角
         float angle = Vector3.Angle(dir, transform.forward);
@@ -105,6 +120,8 @@ public class EnemySenses : MonoBehaviour
             //如果射线检测到的是玩家
             if (hit.collider.CompareTag(GameConsts.PLAYER))
             {
+                playerInSight = true;
+                //触发全局警报
                 AlarmSystem.instance.alarmPosition = player.position;
             }
         }
