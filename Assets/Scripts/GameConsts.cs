@@ -42,6 +42,8 @@ public class GameConsts
     public const float WATCH_OFFSET = 0f;
     //玩家身体偏移量
     public const float PLAYER_BODY_OFFSET = 1f;
+    //玩家眼睛偏移量
+    public const float ENEMY_EYES_OFFSET = 1.8f;
     #endregion
 
     #region Static Constructor
@@ -53,6 +55,7 @@ public class GameConsts
         LOCOMOTION_STATE = Animator.StringToHash("Locomotion");
         DOOROPEN_PARAM = Animator.StringToHash("DoorOpen");
         //Debug.Log("static");
+
     }
     #endregion
 }

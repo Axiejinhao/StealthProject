@@ -243,6 +243,7 @@
     <Compile Include="Assets\Scripts\Alarm\AlarmTrigger.cs" />
     <Compile Include="Assets\Scripts\Door\BigDoorController.cs" />
     <Compile Include="Assets\Scripts\Door\LittleDoorController.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemySenses.cs" />
     <Compile Include="Assets\Scripts\GameConsts.cs" />
     <Compile Include="Assets\Scripts\Laser\LaserController.cs" />
     <Compile Include="Assets\Scripts\Laser\LaserTwinkle.cs" />

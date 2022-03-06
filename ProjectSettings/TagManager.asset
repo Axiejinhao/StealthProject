@@ -9,6 +9,7 @@ TagManager:
   - Siren
   - InnerDoor
   - Lift
+  - Enemy
   layers:
   - Default
   - TransparentFX
