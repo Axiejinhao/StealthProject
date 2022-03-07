@@ -14,6 +14,7 @@ public class EnemyAnimation : MonoBehaviour
     private NavMeshAgent nav;
     private Animator ani;
     private EnemySenses enemySenses;
+    private PlayerHealth playerHealth;
 
     private void Awake()
     {
@@ -24,6 +25,7 @@ public class EnemyAnimation : MonoBehaviour
 
     private void Start()
     {
+        playerHealth = PlayerBag.instance.GetComponent<PlayerHealth>();
     }
 
     /// <summary>
@@ -72,5 +74,15 @@ public class EnemyAnimation : MonoBehaviour
         angle = Mathf.Deg2Rad * angle;
         //设置角速度
         ani.SetFloat(GameConsts.ANGULARSPEED_PARAM, angle, 0.2f, Time.deltaTime);
+
+        if (playerHealth.playerHP > 0)
+        {
+            //玩家是否在视野范围内
+            ani.SetBool(GameConsts.PLAYERINSIGHT_PARAM, enemySenses.playerInSight);
+        }
+        else
+        {
+            ani.SetBool(GameConsts.PLAYERINSIGHT_PARAM, false);
+        }
     }
 }

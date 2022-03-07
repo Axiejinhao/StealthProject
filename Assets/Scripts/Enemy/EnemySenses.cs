@@ -66,6 +66,11 @@ public class EnemySenses : MonoBehaviour
             return;
         }
 
+        if (PlayerHealth.instance.playerHP <= 0)
+        {
+            return;
+        }
+
         //视觉检测
         Sighting();
         //听觉检测

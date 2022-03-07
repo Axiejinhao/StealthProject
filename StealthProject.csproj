@@ -246,11 +246,13 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyAI.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAnimation.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemySenses.cs" />
-    <Compile Include="Assets\Scripts\GameConsts.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyShootIK.cs" />
     <Compile Include="Assets\Scripts\Laser\LaserController.cs" />
     <Compile Include="Assets\Scripts\Laser\LaserTwinkle.cs" />
-    <Compile Include="Assets\Scripts\LiftController.cs" />
-    <Compile Include="Assets\Scripts\PickUpKeyCard.cs" />
+    <Compile Include="Assets\Scripts\Others\GameConsts.cs" />
+    <Compile Include="Assets\Scripts\Others\LiftController.cs" />
+    <Compile Include="Assets\Scripts\Others\PickUpKeyCard.cs" />
+    <Compile Include="Assets\Scripts\Others\ShootingEffect.cs" />
     <Compile Include="Assets\Scripts\Player\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerBag.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />

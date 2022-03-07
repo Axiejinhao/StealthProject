@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float turnSpeed = 30f;
     [Header("喊叫声音片段")]
     public AudioClip shoutClip;
+
     //虚拟轴
     private float hor, ver;
     //虚拟按键
@@ -36,6 +37,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (PlayerHealth.instance.playerHP <= 0)
+        {
+            return;
+        }
+
         hor = Input.GetAxis(GameConsts.HORIZONTAL);
         ver = Input.GetAxis(GameConsts.VERTICAL);
         sneak = Input.GetButton(GameConsts.SNEAK);

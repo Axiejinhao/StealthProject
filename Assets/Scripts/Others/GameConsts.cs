@@ -1,4 +1,10 @@
 ﻿using UnityEngine;
+/*
+ Batches优化
+ 1.将静态物体设置成Batching Static
+ 2.设置摄像机的渲染路径
+ */
+
 
 /// <summary>
 /// 游戏常数类
@@ -32,11 +38,19 @@ public class GameConsts
     public static int SHOUT_PARAM;
     //开关门参数
     public static int DOOROPEN_PARAM;
+    //死亡参数
+    public static int DEAD_PARAM;
 
     //运动状态
     public static int LOCOMOTION_STATE;
     //角速度参数
     public static int ANGULARSPEED_PARAM;
+    //玩家是否在视野范围内
+    public static int PLAYERINSIGHT_PARAM;
+    //射击状态
+    public static int WEAPONSHOOT_STATE;
+    //抬手状态
+    public static int WEAPONRAISE_STATE;
     #endregion
 
     #region Game Paramters
@@ -44,8 +58,10 @@ public class GameConsts
     public const float WATCH_OFFSET = 0f;
     //玩家身体偏移量
     public const float PLAYER_BODY_OFFSET = 1f;
-    //玩家眼睛偏移量
+    //敌人眼睛偏移量
     public const float ENEMY_EYES_OFFSET = 1.8f;
+    //敌人射击偏移量
+    public const float ENEMY_SHOOT_OFFSET = 1.5f;
     #endregion
 
     #region Static Constructor
@@ -57,6 +73,10 @@ public class GameConsts
         SHOUT_PARAM = Animator.StringToHash("Shout");
         LOCOMOTION_STATE = Animator.StringToHash("Locomotion");
         DOOROPEN_PARAM = Animator.StringToHash("DoorOpen");
+        PLAYERINSIGHT_PARAM = Animator.StringToHash("PlayerInSight");
+        WEAPONSHOOT_STATE = Animator.StringToHash("WeaponShoot");
+        WEAPONRAISE_STATE = Animator.StringToHash("WeaponRaise");
+        DEAD_PARAM = Animator.StringToHash("Dead");
         //Debug.Log("static");
 
     }

@@ -288,8 +288,8 @@ ModelImporter:
           postInfinity: 2
           rotationOrder: 4
       events:
-      - time: 0.08136252
-        functionName: TakeDamage
+      - time: 0.078509346
+        functionName: Shoot
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
