@@ -54,6 +54,6 @@ public class PlayerHealth : MonoBehaviour
     /// </summary>
     public void ReStart()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        SceneManager.LoadScene("MainInterface");
     }
 }

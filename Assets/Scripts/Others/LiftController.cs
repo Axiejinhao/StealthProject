@@ -41,7 +41,7 @@ public class LiftController : MonoBehaviour
             if (timer > aud.clip.length)
             {
                 //重新加载场景
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene("MainInterface");
             }
         }
     }

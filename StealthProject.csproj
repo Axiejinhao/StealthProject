@@ -249,6 +249,7 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyShootIK.cs" />
     <Compile Include="Assets\Scripts\Laser\LaserController.cs" />
     <Compile Include="Assets\Scripts\Laser\LaserTwinkle.cs" />
+    <Compile Include="Assets\Scripts\LoadAsyncSence.cs" />
     <Compile Include="Assets\Scripts\Others\GameConsts.cs" />
     <Compile Include="Assets\Scripts\Others\LiftController.cs" />
     <Compile Include="Assets\Scripts\Others\PickUpKeyCard.cs" />
